@@ -161,7 +161,7 @@ class Contact {
     function countContacts(contact) 
     {
         if (i != null)
-            return count++;
+            return i++;
     }
     newContact.reduce(countContacts, 0);
     console.log('count is : ' + i);
