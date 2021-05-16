@@ -1,4 +1,4 @@
-class contact {
+class Contact {
 
     constructor(params){
         this.firstName = params[0];
