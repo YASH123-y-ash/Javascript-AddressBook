@@ -145,3 +145,8 @@ class Contact {
        newContact.push(new Contact('Prince', 'Saurabh', 'Madhubani', 'Purnea',
                        'Bihar', '845301', '91 8825223604', 'yas@gmail.com')); 
        newContact.forEach((contact) => console.log(contact.toString()));
+
+       //to find contact with first name and edit
+       newContact.filter(contact => contact.firstName = "Yash").map(contact => contact.firstName = "Rakesh");
+       console.log('contact after editing');  
+       newContact.forEach((contact) => console.log(contact.toString()));
