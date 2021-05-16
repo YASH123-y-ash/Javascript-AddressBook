@@ -1,7 +1,7 @@
 /* @Description: creating contact class and creating constructor
    and used this keyword for initializing the instance.
 */
-class contact {
+class Contact {
 
     constructor(params){
         this.firstName = params[0];
