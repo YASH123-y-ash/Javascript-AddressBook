@@ -155,3 +155,13 @@ class Contact {
        let index = newContact.findIndex(contact => contact.firstName = "Pritam");
        newContact.slice(index, 1);
        newContact.forEach((contact) => console.log(contact.toString()));
+      
+       //to count the number of contacts
+       let i = 0;
+    function countContacts(contact) 
+    {
+        if (i != null)
+            return count++;
+    }
+    newContact.reduce(countContacts, 0);
+    console.log('count is : ' + i);
