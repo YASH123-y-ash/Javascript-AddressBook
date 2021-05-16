@@ -147,6 +147,11 @@ class Contact {
        newContact.forEach((contact) => console.log(contact.toString()));
 
        //to find contact with first name and edit
-       newContact.filter(contact => contact.firstName = "Yash").map(contact => contact.firstName = "Rakesh");
+       newContact.filter(contact => contact.firstName = "Yash").map(contact => contact.firstName = "Aman");
        console.log('contact after editing');  
+       newContact.forEach((contact) => console.log(contact.toString()));
+
+       //to delete contact using first name
+       let index = newContact.findIndex(contact => contact.firstName = "Pritam");
+       newContact.slice(index, 1);
        newContact.forEach((contact) => console.log(contact.toString()));
