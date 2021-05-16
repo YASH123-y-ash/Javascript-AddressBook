@@ -1,7 +1,7 @@
 /* @Description: creating contact class and creating constructor
    and used this keyword for initializing the instance.
 */
-class contact {
+class Contact {
 
     constructor(params){
         this.firstName = params[0];
@@ -17,13 +17,13 @@ class contact {
     // to validate first name using regex and throw error for invalid name
     get firstName()
     {
-        return this._firstName;
+        return this.firstName;
     }
     set firstName(firstName)
     {
-        let firstNameREpression = RegExp("^[A-Z]{1}[a-z]{2,}+$");
+        let firstNameREpression = RegExp('^[A-Z]{1}[a-z]{2,}+$');
         if (firstNameREpression.test(firstName))
-        this._firstName = firstName;
+        this.firstName = firstName;
         else
         throw "invalid";
     }
@@ -31,13 +31,13 @@ class contact {
     // to validate last name using regex 
     get lastName()
     {
-        return this._lastName;
+        return this.lastName;
     }
     set lastName(lastName)
     {
         let lastNameRegex = RegExp("^[A-Za-z]+$");
         if(lastNameRegex.test(lastName))
-        this._lastName = lastName;
+        this.lastName = lastName;
         else
         throw "invalid";
     }
@@ -45,13 +45,13 @@ class contact {
     //to validate address using regex
     get address()
     {
-        return this._address;
+        return this.address;
     }
     set address(address)
     {
         let addressRExpression = RegExp("^[A-Za-z]{4,}$");
         if (addressRExpression.test(address))
-        this._address = address;
+        this.address = address;
         else
         throw "invalid"; 
     }
@@ -59,13 +59,13 @@ class contact {
     // to validate city using regex
     get city() 
     { 
-        return this._city; 
+        return this.city; 
     }
     set city(city)
     {
         let cityRExpression = RegExp("^[A-Za-z]{4,}$");
         if (cityRExpression.test(city))
-            this._city = city;
+            this.city = city;
         else
             throw "Invalid";
     }
@@ -73,13 +73,13 @@ class contact {
     // to validate state using regex
     get state()
     {
-          return this._state; 
+          return this.state; 
     }
     set state(state) 
     {
         let stateRExpression = RegExp("^[A-Za-z0-9]{4,}$");
         if (stateRExpression.test(state))
-            this._state = state;
+            this.state = state;
         else
             throw "Invalid";
     }
@@ -87,12 +87,12 @@ class contact {
     // to validate zip code using regex
     get zip() 
     { 
-        return this._zip; 
+        return this.zip; 
     }
     set zip(zip) {
         let zipRExpression = RegExp("^[1-9]{3}[ ]?[0-9]{3}$");
         if (zipRExpression.test(zip))
-            this._zip = zip;
+            this.zip = zip;
         else
             throw "Invalid";
     }
@@ -100,12 +100,12 @@ class contact {
     //to validate email using regex
     get email() 
     { 
-        return this._email; 
+        return this.email; 
     }
     set email(email) {
         let emailRExpression = RegExp("^([a-z0-9A-Z])+([.]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-zA-Z]{2,}([.]{1}[a-z]{2,})?$");
         if (emailRExpression.test(email))
-            this._email = email;
+            this.email = email;
         else
             throw "Invalid";
     }
@@ -113,13 +113,13 @@ class contact {
     //to validate phone number using regex
     get phoneNumber() 
     {
-         return this._phoneNumber; 
+         return this.phoneNumber; 
     }
     set phoneNumber(phoneNumber) 
     {
         let phoneRExpression = RegExp("^[1-9]{2}[ ]{1}[0-9]{10}$");
         if (phoneRExpression.test(phoneNumber))
-            this._phoneNumber = phoneNumber;
+            this.phoneNumber = phoneNumber;
         else
             throw "Invalid phone number";
     }
@@ -133,3 +133,15 @@ class contact {
             + ", Phone Number: " + this.phoneNumber + ", Email: " + this.email;
     }
 }
+    /* @Description: creating new address book array
+    *  and adding new contacts to addressbook.
+    */
+     
+    let newContact = new Array();
+       newContact.push(new Contact('Yash', 'Wardhan', 'Madhubani', 'Purnea',
+                       'Bihar', '845301', '91 8825223804', 'war@gmail.com')); 
+       newContact.push(new Contact('Pritam', 'Kumar', 'Madhubani', 'Purnea',
+                       'Bihar', '845301', '91 8825233804', 'pri@gmail.com'));   
+       newContact.push(new Contact('Prince', 'Saurabh', 'Madhubani', 'Purnea',
+                       'Bihar', '845301', '91 8825223604', 'yas@gmail.com')); 
+       newContact.forEach((contact) => console.log(contact.toString()));
